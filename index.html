@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/svg+xml" href="assets/assets/favicon.svg" />
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Prompts</title>
+  </head>
+  <body>
+    <div class="app">
+      <button class="icon-button open-toggle" id="btn-open">
+        <img src="assets/assets/open.svg" alt="Abrir Menu" class="icon" />
+      </button>
+
+      <aside class="sidebar">
+        <header class="sidebar-header">
+          <img src="assets/assets/logo.svg" alt="Logo" class="logo" />
+
+          <button class="icon-button" id="btn-collapse">
+            <img
+              src="assets/assets/collapse.svg"
+              alt="Fechar Menu"
+              class="icon"
+            />
+          </button>
+        </header>
+
+        <div class="sidebar-content">
+          <div class="search-container">
+            <img
+              src="assets/assets/search.svg"
+              alt="Buscar"
+              class="icon search-icon"
+            />
+
+            <input
+              type="text"
+              class="search-input"
+              id="search-input"
+              placeholder="Buscar por título"
+            />
+
+            <button class="btn-primary btn btn-full" id="btn-new">
+              Novo Prompt
+            </button>
+          </div>
+          <div>
+            <ul class="prompts-list" id="prompts-list">
+              <li class="prompt-item">
+                <div class="prompt-item-content">
+                  <span class="prompt-item-title">Título do prompt</span>
+                  <span class="prompt-item-description"
+                    >Descrição breve do prompt para visualização.</span
+                  >
+                </div>
+                <button class="btn-icon" title="Remover">
+                  <img
+                    src="assets/assets/remove.svg"
+                    alt="Remover"
+                    class="icon icon-trash"
+                  />
+                </button>
+              </li>
+              <li class="prompt-item">
+                <div class="prompt-item-content">
+                  <span class="prompt-item-title">Título do prompt</span>
+                  <span class="prompt-item-description"
+                    >Descrição breve do prompt para visuzalição.</span
+                  >
+                </div>
+                <button class="btn-icon" title="Remover">
+                  <img
+                    src="assets/assets/remove.svg"
+                    alt="Remover"
+                    class="icon icon-trash"
+                  />
+                </button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </aside>
+
+      <main class="main">
+        <header class="main-header">
+          <button id="btn-copy" class="btn-outline btn">
+            <img src="assets/assets/copy.svg" alt="Copiar" class="icon" />
+            <span>Copiar</span>
+          </button>
+
+          <button id="btn-save" class="btn-primary btn w-150">Salvar</button>
+        </header>
+
+        <div
+          data-placeholder="Título do prompt..."
+          class="editable-wrapper"
+          id="title-wrapper"
+        >
+          <h1 id="prompt-title" class="prompt-title" contenteditable="true">
+            🧠 Gerenciador de Prompts
+          </h1>
+        </div>
+
+        <div
+          data-placeholder="Conteúdo do prompt ..."
+          class="editable-wrapper"
+          id="content-wrapper"
+        >
+          <div
+            id="prompt-content"
+            class="prompt-content"
+            contenteditable="true"
+          >
+            Tenha todos os seus prompts organizados em um só lugar,<br />
+            prontos para copiar, editar e aplicar em qualquer agente de IA
+            quando quiser.<br />
+            Um espaço simples e eficiente para gerenciar, testar e reutilizar
+            seus prompts de forma prática e rápida.
+          </div>
+        </div>
+      </main>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
